@@ -9,6 +9,6 @@ const redis = new Redis({
 
 export const ratelimit = new Ratelimit({
   redis: redis,
-  limiter: Ratelimit.slidingWindow(Number(SVGL_API_REQUESTS), '60s'),
+  limiter: Ratelimit.slidingWindow(Number(SVGL_API_REQUESTS), '3s'),
   analytics: true
 });
